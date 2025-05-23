@@ -1,9 +1,13 @@
+
 import React from 'react';
 import { Sidebar } from '../components/Sidebar';
 import { NoteEditor } from '../components/NoteEditor';
 import { SearchBar } from '../components/SearchBar';
 import { SidebarProvider } from '../context/SidebarContext';
 import { NotesProvider } from '../context/NotesContext';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '../components/ui/tabs';
+import { KanbanBoard } from '../components/KanbanBoard';
+
 const Index = () => {
   return <NotesProvider>
       <SidebarProvider>
@@ -22,7 +26,18 @@ const Index = () => {
               </div>
             </header>
             <main className="flex-1 p-6">
-              <NoteEditor />
+              <Tabs defaultValue="notes" className="w-full">
+                <TabsList className="mb-4">
+                  <TabsTrigger value="notes">Notes</TabsTrigger>
+                  <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
+                </TabsList>
+                <TabsContent value="notes" className="mt-0">
+                  <NoteEditor />
+                </TabsContent>
+                <TabsContent value="kanban" className="mt-0">
+                  <KanbanBoard />
+                </TabsContent>
+              </Tabs>
             </main>
           </div>
         </div>
