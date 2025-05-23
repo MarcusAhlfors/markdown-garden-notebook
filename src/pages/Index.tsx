@@ -5,7 +5,6 @@ import { NoteEditor } from '../components/NoteEditor';
 import { SearchBar } from '../components/SearchBar';
 import { SidebarProvider } from '../context/SidebarContext';
 import { NotesProvider } from '../context/NotesContext';
-import { FileText } from 'lucide-react';
 
 const Index = () => {
   return (
@@ -17,9 +16,11 @@ const Index = () => {
             <header className="bg-white border-b border-gray-200 p-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2 mr-4">
-                  <div className="flex items-center justify-center h-10 w-10 rounded-lg bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 text-white shadow-md transform rotate-12 hover:rotate-0 transition-all duration-300">
-                    <FileText className="h-5 w-5" />
-                  </div>
+                  <img 
+                    src="/lovable-uploads/5f4c90dc-855c-42b0-8834-74ff1bee8550.png" 
+                    alt="MarkNote Logo" 
+                    className="h-10 w-auto hover:scale-105 transition-transform duration-300"
+                  />
                   <span className="font-bold text-xl text-gray-800 hidden sm:block">MarkNote</span>
                 </div>
                 <div className="flex-1">
