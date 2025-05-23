@@ -19,7 +19,7 @@ const Index = () => {
                   <img 
                     src="/lovable-uploads/5f4c90dc-855c-42b0-8834-74ff1bee8550.png" 
                     alt="MarkNote Logo" 
-                    className="h-10 w-auto hover:scale-105 transition-transform duration-300"
+                    className="h-10 w-auto"
                   />
                   <span className="font-bold text-xl text-gray-800 hidden sm:block">MarkNote</span>
                 </div>
