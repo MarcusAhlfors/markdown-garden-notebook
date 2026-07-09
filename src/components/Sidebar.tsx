@@ -1,10 +1,12 @@
 
 import React, { useState } from 'react';
-import { ChevronRight, ChevronDown, Plus, FolderPlus, Search, Tag } from 'lucide-react';
+import { ChevronRight, ChevronDown, Plus, FolderPlus, Search, Tag, Info } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useSidebar } from '../context/SidebarContext';
 import { useNotes } from '../context/NotesContext';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
+
 
 export const Sidebar: React.FC = () => {
   const { isCollapsed, toggleSidebar } = useSidebar();
