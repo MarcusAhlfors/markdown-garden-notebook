@@ -95,9 +95,10 @@ export const Sidebar: React.FC = () => {
   const allTags = getAllTags();
 
   return (
-    <div className={`bg-slate-800 border-r border-slate-700 transition-all duration-300 ${
+    <div className={`bg-slate-800 border-r border-slate-700 flex flex-col transition-all duration-300 ${
       isCollapsed ? 'w-16' : 'w-80'
     }`}>
+
       <div className="p-4 border-b border-slate-700">
         <div className="flex items-center justify-between">
           {!isCollapsed && (
