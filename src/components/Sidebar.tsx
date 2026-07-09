@@ -198,8 +198,18 @@ export const Sidebar: React.FC = () => {
               </div>
             </div>
           )}
+          <div className="mt-auto px-4 py-4 border-t border-slate-700">
+            <Link
+              to="/info"
+              className="flex items-center gap-2 text-sm text-slate-300 hover:text-white hover:bg-slate-700 rounded p-2 transition-colors"
+            >
+              <Info className="w-4 h-4" />
+              About
+            </Link>
+          </div>
         </>
       )}
     </div>
   );
 };
+
