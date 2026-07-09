@@ -1,10 +1,12 @@
 
 import React, { useState } from 'react';
-import { ChevronRight, ChevronDown, Plus, FolderPlus, Search, Tag } from 'lucide-react';
+import { ChevronRight, ChevronDown, Plus, FolderPlus, Search, Tag, Info } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useSidebar } from '../context/SidebarContext';
 import { useNotes } from '../context/NotesContext';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
+
 
 export const Sidebar: React.FC = () => {
   const { isCollapsed, toggleSidebar } = useSidebar();
@@ -93,9 +95,10 @@ export const Sidebar: React.FC = () => {
   const allTags = getAllTags();
 
   return (
-    <div className={`bg-slate-800 border-r border-slate-700 transition-all duration-300 ${
+    <div className={`bg-slate-800 border-r border-slate-700 flex flex-col transition-all duration-300 ${
       isCollapsed ? 'w-16' : 'w-80'
     }`}>
+
       <div className="p-4 border-b border-slate-700">
         <div className="flex items-center justify-between">
           {!isCollapsed && (
@@ -196,8 +199,18 @@ export const Sidebar: React.FC = () => {
               </div>
             </div>
           )}
+          <div className="mt-auto px-4 py-4 border-t border-slate-700">
+            <Link
+              to="/info"
+              className="flex items-center gap-2 text-sm text-slate-300 hover:text-white hover:bg-slate-700 rounded p-2 transition-colors"
+            >
+              <Info className="w-4 h-4" />
+              About
+            </Link>
+          </div>
         </>
       )}
     </div>
   );
 };
+
